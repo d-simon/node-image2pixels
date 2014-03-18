@@ -1,0 +1,31 @@
+{
+  "name": "node-image2pixels",
+  "version": "0.1.0",
+  "description": "Opens and converts image to pixels",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d-simon/node-image2pixels.git"
+  },
+  "dependencies": {
+    "gd-image2pixels": "~0.1.0",
+    "node-gd": "~0.2.3",
+    "gd-magicopen": "~0.1.1"
+  },
+  "keywords": [
+    "gd",
+    "image",
+    "pixels",
+    "array"
+  ],
+  "author": {
+    "name": "David Simon",
+    "email": "me@davidsimon.ch",
+    "url": "https://github.com/d-simon"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d-simon/node-image2pixels/issues"
+  },
+  "homepage": "https://github.com/d-simon/node-image2pixels"
+}
