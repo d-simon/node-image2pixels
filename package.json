@@ -1,6 +1,6 @@
 {
   "name": "node-image2pixels",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Opens and converts image to pixels",
   "main": "index.js",
   "repository": {
@@ -10,7 +10,11 @@
   "dependencies": {
     "gd-image2pixels": "~0.1.0",
     "node-gd": "~0.2.3",
-    "gd-magicopen": "~0.1.1"
+    "gd-magicopen": "~0.1.1",
+    "extend": "~1.2.1"
+  },
+  "devDependencies": {
+    "underscore": "~1.6.0"
   },
   "keywords": [
     "gd",
