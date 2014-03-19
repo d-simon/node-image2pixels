@@ -40,7 +40,7 @@ module.exports = function (filename, options, callback) {
             }
             callback(null, outputimg);
         } else {
-            // Rraw data output
+            // Raw data output
             callback(null, pixels);
         }
     });

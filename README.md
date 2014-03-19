@@ -1,7 +1,11 @@
-node-image2pixels
+image2pixels
 ============
 
 Opens and converts image to pixels
+
+## Install
+
+    npm install image2pixels
 
 ## Usage
 
@@ -9,18 +13,23 @@ Opens and converts image to pixels
 
 ### Arguments
 
- * `imagePath` *String*
+ * `imagePath` *String*  
  The path to the input image.
- * `options`    *Object*  (optional)
- The options object.
- * `callback`    *Function*
+ * `options`    *Object*  (optional)  
+ The options object which contains:
+   * `GD` *Boolean* (optional)  
+   Wether to return a *GD obj* or *raw array.*
+   Defaults to `false`
+   * `pixelsCallback` *Function*` (optional)  
+   A callback function which receives the raw pixel array before it is returned or processed. Must return the (un)modified array.
+ * `callback`    *Function*  
  The callback function wich receives `err`, `output`
-   * `err` - if there was an error otherwise this will be *null*
-   * `output` - *node-gd object* or array of row objects
+   * `err` - if there was an error otherwise this will be *null*.
+   * `output` - *node-gd object* or array of row objects.
 
-##Example usage:
+##Example
 
-Taken from the [example/example.js][https://github.com/d-simon/node-image2pixels/blob/master/example/index.js]
+Taken from the [example/example.js](https://github.com/d-simon/node-image2pixels/blob/master/example/index.js)
 
 ```javascript
 var image2pixels = require('../index.js')
