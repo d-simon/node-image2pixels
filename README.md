@@ -13,17 +13,11 @@ Opens and converts image to pixels
 
 ### Arguments
 
- * `imagePath` *String*  
- The path to the input image.
- * `options`    *Object*  (optional)  
- The options object which contains:
-   * `GD` *Boolean* (optional)  
-   Wether to return a *GD obj* or *raw array.*
-   Defaults to `false`
-   * `pixelsCallback` *Function*` (optional)  
-   A callback function which receives the raw pixel array before it is returned or processed. Must return the (un)modified array.
- * `callback`    *Function*  
- The callback function wich receives `err`, `output`
+ * `imagePath` *String*
+ * `options`    *Object*  (optional)
+   * `GD` *Boolean* (optional) Wether to return a *GD obj* or *raw array.* Defaults to `false`
+   * `pixelsCallback` *Function*` (optional)  A callback function which receives the raw pixel array before it is returned or processed. Must return the (un)modified array.
+ * `callback`    *Function*
    * `err` - if there was an error otherwise this will be *null*.
    * `output` - *node-gd object* or array of row objects.
 
