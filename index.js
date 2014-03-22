@@ -10,7 +10,7 @@ module.exports = function (filename, options, callback) {
         callback = options;
         opts = {};
     } else {
-        opts = options || {};
+        opts = options || {};
     }
     // Default Settings
     opts = extend({ GD: false, pixelsCallback: false }, opts);
@@ -20,7 +20,7 @@ module.exports = function (filename, options, callback) {
         var pixels = i2p(inputimg);
 
         // Pixels Callback
-        if (typeof opts.pixelsCallback === 'function') pixels = opts.pixelsCallback(pixels) || pixels;
+        if (typeof opts.pixelsCallback === 'function') pixels = opts.pixelsCallback(pixels) || pixels;
 
         // Process
         if (opts.GD === true) {
@@ -29,10 +29,8 @@ module.exports = function (filename, options, callback) {
               , width = pixels[0].length
               , outputimg = gd.createTrueColor(width, height);
 
-            for(var i = 0; i < height; i++)
-            {
-                for(var j = 0; j < width; j++)
-                {
+            for(var i = 0; i < height; i++) {
+                for(var j = 0; j < width; j++) {
                     var pixel = pixels[i][j];
                     var color = gd.trueColor(pixel.red, pixel.green, pixel.blue);
                     outputimg.setPixel(j, i, pixel.raw);
