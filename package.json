@@ -1,6 +1,6 @@
 {
   "name": "image2pixels",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Opens and converts image to pixels",
   "main": "index.js",
   "repository": {
