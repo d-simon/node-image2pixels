@@ -25,21 +25,25 @@ module.exports = function (filename, options, callback) {
         // Process
         if (opts.GD === true) {
             // GD output
-            var height = pixels.length
-              , width = pixels[0].length
-              , outputimg = gd.createTrueColor(width, height);
-
-            for(var i = 0; i < height; i++) {
-                for(var j = 0; j < width; j++) {
-                    var pixel = pixels[i][j];
-                    var color = gd.trueColor(pixel.red, pixel.green, pixel.blue);
-                    outputimg.setPixel(j, i, pixel.raw);
-                }
-            }
+            var outputimg = convertGD(pixels);
             callback(null, outputimg);
         } else {
             // Raw data output
             callback(null, pixels);
         }
     });
+
+    function convertGD (pixels) {
+        var height = pixels.length
+          , width = pixels[0].length
+          , outputImg = gd.createTrueColor(width, height);
+
+        for(var i = 0; i < height; i++) {
+            for(var j = 0; j < width; j++) {
+                var pixel = pixels[i][j];
+                outputImg.setPixel(j, i, pixel.raw);
+            }
+        }
+        return outputImg;
+    }
 };
