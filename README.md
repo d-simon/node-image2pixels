@@ -3,6 +3,8 @@ image2pixels
 
 Opens and converts image to pixels
 
+[![Code Climate](https://codeclimate.com/github/d-simon/node-image2pixels.png)](https://codeclimate.com/github/d-simon/node-image2pixels)
+
 ## Install
 
     npm install image2pixels
